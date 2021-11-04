@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="login-form shadow">
+    <p class="header">
+      Outfit Planner
+    </p>
+    <p>
+      <mat-form-field color="accent" class="example-form-field" appearance="fill">
+        <mat-label>Login</mat-label>
+        <input matInput type="text" [(ngModel)]="loginForm.email">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field color="accent" class="example-form-field" appearance="fill">
+        <mat-label>Passowrd</mat-label>
+        <input matInput type="password" [(ngModel)]="loginForm.password">
+      </mat-form-field>
+    </p>
+    <div class="create-account">
+      <span class="small-text">
+        {{createAccount ? "Already have an account?" : "New here?"}}
+      </span>
+      <span (click)="createAccount = !createAccount" class="small-text accent bold clickable">
+        {{createAccount ? "Swtich to log in" : "Create an account"}}
+      </span>
+    </div>
+    <p class="button-container">
+      <button class="button" id="basic" type="button" mat-raised-button (click)="onAction()" color="accent">
+        {{createAccount? "Sign up" : "Log in"}}
+      </button>
+    </p>
+  </div>
+</div>
